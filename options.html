@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>PiraTrue Safety Net · Settings</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #050509;
+      color: #f5f5f7;
+      padding: 24px;
+    }
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .brand {
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 12px;
+      display: inline-flex;
+      gap: 0;
+      align-items: baseline;
+    }
+    .brand span.true {
+      color: #ff2257;
+      margin-left: 2px;
+    }
+    .subtitle {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: #9ca3af;
+      margin-top: 4px;
+    }
+    .divider {
+      height: 1px;
+      background: linear-gradient(90deg,#ff2257,#4b5563);
+      margin: 12px 0 20px 0;
+    }
+    h2 {
+      font-size: 14px;
+      margin: 12px 0 6px;
+    }
+    p {
+      font-size: 12px;
+      color: #9ca3af;
+      margin: 0 0 10px;
+    }
+    .field-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: #9ca3af;
+      margin-bottom: 4px;
+    }
+    textarea {
+      width: 100%;
+      min-height: 90px;
+      background: #0b0f17;
+      color: #e5e7eb;
+      border-radius: 4px;
+      border: 1px solid #111827;
+      padding: 8px 10px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size: 12px;
+      resize: vertical;
+    }
+    .button-row {
+      margin-top: 14px;
+      display: flex;
+      gap: 10px;
+    }
+    button {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: 1px solid #ff2257;
+      background: #050509;
+      color: #f9fafb;
+      cursor: pointer;
+    }
+    button.secondary {
+      border-color: #4b5563;
+      color: #d1d5db;
+    }
+    .status {
+      font-size: 11px;
+      margin-top: 8px;
+      color: #9ca3af;
+    }
+    .footer {
+      margin-top: 28px;
+      font-size: 11px;
+      color: #9ca3af;
+      text-align: center;
+    }
+    .footer a {
+      color: #ff2257;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="brand">
+      <span>PIRA</span><span class="true">TRUE</span>
+    </div>
+    <div class="subtitle">Safety Net · Settings</div>
+    <div class="divider"></div>
+
+    <p>
+      PiraTrue Safety Net checks the sites you visit against curated piracy safety lists
+      and highlights whether a site is trusted, untrusted, or unknown, so you can avoid
+      scammy clones and malware‑heavy pages.
+    </p>
+
+    <p>
+      For the full list of trusted/untrusted sites and download links, visit
+      <a href="https://sanjeeth-prakash.github.io/piratrue/piratrue.html" target="_blank">
+        the PiraTrue site
+      </a>.
+    </p>
+
+    <h2>Custom trusted sites</h2>
+    <p>Add extra domains you personally trust. One per line (e.g. <code>mycoolsite.com</code>).</p>
+    <div class="field-label">Trusted domains</div>
+    <textarea id="trusted-custom"></textarea>
+
+    <h2>Custom untrusted sites</h2>
+    <p>Add base names to always flag as UNTRUSTED (e.g. <code>vfxdownload</code>, <code>aimhaven</code>). One per line.</p>
+    <div class="field-label">Untrusted base names</div>
+    <textarea id="unsafe-custom"></textarea>
+
+    <div class="button-row">
+      <button id="save-btn">Save</button>
+      <button id="reset-btn" class="secondary">Reset to defaults</button>
+    </div>
+    <div id="status" class="status"></div>
+
+    <div class="footer">
+      made with 💗 by sanjeeth
+    </div>
+  </div>
+
+  <script src="options.js"></script>
+</body>
+</html>
